@@ -1,16 +1,13 @@
 package handler
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
 	"net/smtp"
 	"os"
 	"strings"
-
-	"github.com/gofiber/adaptor/v2"
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/middleware/recover"
 )
 
 type contactBody struct {
@@ -22,21 +19,39 @@ type contactBody struct {
 	Message string `json:"message"`
 }
 
-func contactSubmit(c *fiber.Ctx) error {
-	var body contactBody
-	if err := c.BodyParser(&body); err != nil {
-		return c.Status(400).JSON(fiber.Map{"status": "error"})
+func Handler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodPost {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
 	}
+
+	var body contactBody
+	if err := json.NewDecoder(r.Body).Decode(&body); err != nil {
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusBadRequest)
+		w.Write([]byte(`{"status":"error"}`))
+		return
+	}
+
 	name := strings.TrimSpace(body.Name)
 	email := strings.TrimSpace(body.Email)
 	if name == "" || email == "" {
-		return c.Status(400).JSON(fiber.Map{"status": "error"})
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusBadRequest)
+		w.Write([]byte(`{"status":"error"}`))
+		return
 	}
+
 	if err := sendEmail(name, body.Phone, email, body.City, body.Size, body.Message); err != nil {
 		log.Printf("contact email error: %v", err)
-		return c.Status(500).JSON(fiber.Map{"status": "error"})
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusInternalServerError)
+		w.Write([]byte(`{"status":"error"}`))
+		return
 	}
-	return c.JSON(fiber.Map{"status": "success"})
+
+	w.Header().Set("Content-Type", "application/json")
+	w.Write([]byte(`{"status":"success"}`))
 }
 
 func sendEmail(name, phone, email, city, size, message string) error {
@@ -68,25 +83,4 @@ func sendEmail(name, phone, email, city, size, message string) error {
 		user, to, emailBody,
 	))
 	return smtp.SendMail(host+":"+port, auth, user, []string{to}, msg)
-}
-
-var app *fiber.App
-
-func init() {
-	app = fiber.New(fiber.Config{
-		ErrorHandler: func(c *fiber.Ctx, err error) error {
-			return c.Status(fiber.StatusInternalServerError).SendString("Internal Server Error")
-		},
-	})
-	app.Use(recover.New())
-	app.Static("/static/images", "./static/images")
-	app.Static("/assets", "./static/dist/assets")
-	app.Post("/contact", contactSubmit)
-	app.Get("*", func(c *fiber.Ctx) error {
-		return c.SendFile("./static/dist/index.html")
-	})
-}
-
-func Handler(w http.ResponseWriter, r *http.Request) {
-	adaptor.FiberApp(app)(w, r)
 }

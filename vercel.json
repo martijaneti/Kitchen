@@ -1,15 +1,8 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/index.go",
-      "use": "@vercel/go",
-      "config": {
-        "includeFiles": ["static/**"]
-      }
-    }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/api/index" }
+  "buildCommand": "cd client && npm install && npm run build",
+  "outputDirectory": "static/dist",
+  "rewrites": [
+    { "source": "/contact", "destination": "/api/contact" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
