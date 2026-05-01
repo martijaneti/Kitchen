@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wood&Craft — Кухни по поръчка</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Wood<span>&</span>Craft</a>
+  <ul class="nav-links">
+    <li><a href="/gallery" data-key="nav_gallery">Галерия</a></li>
+    <li><a href="/#services" data-key="nav_services">Услуги</a></li>
+    <li><a href="/#about" data-key="nav_about">За нас</a></li>
+    <li><a href="/process" data-key="nav_process">Процес</a></li>
+    <li><a href="/contact" data-key="nav_contact">Контакти</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-bg" onclick="setLang('bg')">БГ</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+    <button class="nav-cta" onclick="window.location.href='/contact'" data-key="nav_cta">Безплатна консултация</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag" data-key="hero_tag">Ръчно изработени кухни</div>
+    <h1 data-key="hero_h1">Всяка кухня разказва своя <em>история</em></h1>
+    <p class="hero-sub" data-key="hero_sub">Кухненско обзавеждане по поръчка, проектирано да издържи поколения. Всяко парче — с любов, прецизност и най-добрите материали.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="window.location.href='/gallery'" data-key="hero_btn1">Вижте нашите проекти</button>
+      <button class="btn-ghost" onclick="window.location.href='/contact'" data-key="hero_btn2">Запитване</button>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">280+</div><div class="stat-label" data-key="stat1">изработени кухни</div></div>
+      <div><div class="stat-num">18г.</div><div class="stat-label" data-key="stat2">опит в занаята</div></div>
+      <div><div class="stat-num">4.9★</div><div class="stat-label" data-key="stat3">оценка от клиенти</div></div>
+    </div>
+  </div>
+  <div class="hero-right" style="position:relative;overflow:hidden;">
+    <img src="/static/images/plovdiv-1.jpg" alt="Kitchen" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(28,22,16,0.45) 0%,rgba(28,22,16,0.1) 100%);"></div>
+    <div class="floating-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-quote" data-key="review_quote">"Невероятна изработка"</p>
+      <p class="review-text" data-key="review_text">Вниманието към детайла е изключително. Кухнята ни стана сърцето на дома.</p>
+      <div class="review-author" data-key="review_author">— Мария К., София</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="services-inner">
+    <div class="section-eyebrow" data-key="serv_eyebrow">Услуги</div>
+    <h2 data-key="serv_h2">Правим <em>кухни по поръчка</em></h2>
+    <p class="serv-body" data-key="serv_body">Специализираме в изработка на кухненско обзавеждане по поръчка — от проектирането до монтажа. Всяка кухня е направена по вашите размери, в стила и материалите, които желаете.</p>
+    <a href="/gallery" class="btn-primary" data-key="serv_gallery_link">Вижте нашите проекти →</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="testimonials" id="about">
+  <div class="section-eyebrow" data-key="test_eyebrow">Какво казват клиентите</div>
+  <h2 data-key="test_h2">Изградено на доверие,<br>завършено с гордост</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <p class="testimonial-text" data-key="t1_text">От първата консултация до монтажа — всичко беше безупречно. Кухнята ни изглежда като от списание за интериорен дизайн.</p>
+      <div class="reviewer"><div class="reviewer-avatar">МК</div><div><div class="reviewer-name" data-key="t1_name">Мария Костадинова</div><div class="reviewer-loc" data-key="t1_loc">Пловдив — Модерно обновяване</div></div></div>
+    </div>
+    <div class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <p class="testimonial-text" data-key="t2_text">Дадохме им трудно Г-образно пространство и те го превърнаха в най-функционалната и красива кухня, която сме имали.</p>
+      <div class="reviewer"><div class="reviewer-avatar">ГП</div><div><div class="reviewer-name" data-key="t2_name">Георги Петров</div><div class="reviewer-loc" data-key="t2_loc">София — Пълно обзавеждане</div></div></div>
+    </div>
+    <div class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <p class="testimonial-text" data-key="t3_text">Масивните дъбови шкафове изглеждат нови и след пет години. Качеството е наистина изключително.</p>
+      <div class="reviewer"><div class="reviewer-avatar">ЕМ</div><div><div class="reviewer-name" data-key="t3_name">Елена Маринова</div><div class="reviewer-loc" data-key="t3_loc">Варна — Кухня по поръчка</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner" id="contact">
+  <div>
+    <h2 data-key="cta_h2">Готови за кухня,<br>която ще <em>обичате завинаги?</em></h2>
+    <p data-key="cta_sub">Запишете безплатна консултация — без ангажимент, само вдъхновение и експертен съвет.</p>
+  </div>
+  <div class="cta-right">
+    <a href="/contact" class="cta-btn" data-key="cta_btn">Запишете се сега →</a>
+    <div class="cta-contacts">
+      <a href="viber://chat?number=%2B35988956799" class="cta-contact-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.997 0C5.977 0 1.04 4.84 1.04 10.777c0 2.237.69 4.342 1.88 6.09L1.04 22.24l5.57-1.845a10.93 10.93 0 005.387 1.382c6.02 0 10.963-4.84 10.963-10.777C22.96 4.84 18.017 0 11.997 0zm4.92 13.26c-.27-.135-1.598-.788-1.845-.878-.248-.09-.428-.135-.608.135-.18.27-.698.878-.856 1.058-.158.18-.315.203-.585.068-.27-.136-1.14-.42-2.172-1.341-.803-.716-1.344-1.6-1.502-1.87-.158-.27-.017-.416.118-.55.121-.12.27-.315.405-.473.135-.157.18-.27.27-.45.09-.18.045-.338-.023-.473-.067-.135-.607-1.463-.832-2.003-.22-.527-.443-.455-.608-.464l-.518-.009c-.18 0-.473.068-.72.338s-.945.923-.945 2.251.967 2.611 1.102 2.791c.135.18 1.903 2.906 4.612 4.075.645.278 1.148.444 1.54.569.647.206 1.236.177 1.702.107.519-.077 1.598-.653 1.823-1.284.225-.63.225-1.17.158-1.284-.068-.112-.248-.18-.518-.315z"/></svg>
+        Viber
+      </a>
+      <a href="tel:+35988956799" class="cta-contact-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C9.61 21 3 14.39 3 6c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        +359 88 9567999
+      </a>
+      <a href="mailto:hello@woodcraft.bg" class="cta-contact-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        hello@woodcraft.bg
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">Wood<span>&</span>Craft</div>
+      <p class="footer-tagline" data-key="footer_tag">Ръчно изработено кухненско обзавеждане с любов в България.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title" data-key="fc1_title">Услуги</div>
+      <a href="/contact" data-key="fc1_1">Кухни по поръчка</a>
+      <a href="/contact" data-key="fc1_2">Кухненски острови</a>
+      <a href="/contact" data-key="fc1_3">Работни плотове</a>
+      <a href="/contact" data-key="fc1_4">Пълно обзавеждане</a>
+      <a href="/contact" data-key="fc1_5">Ремонт и обновяване</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title" data-key="fc2_title">Компания</div>
+      <a href="/#about" data-key="fc2_1">За нас</a>
+      <a href="/process" data-key="fc2_2">Нашият процес</a>
+      <a href="/gallery" data-key="fc2_3">Галерия</a>
+      <a href="/#about" data-key="fc2_4">Отзиви</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title" data-key="fc3_title">Контакти</div>
+      <a href="/contact" data-key="fc3_1">Безплатна оферта</a>
+      <a href="viber://chat?number=%2B35988956799" data-key="fc3_2">Пишете ни във Viber</a>
+      <a href="tel:+35988956799" data-key="fc3_4">+359 88 9567999</a>
+      <a href="mailto:hello@woodcraft.bg">hello@woodcraft.bg</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-key="footer_copy">© 2026 Wood&Craft. Всички права запазени.</span>
+    <span data-key="footer_links">Политика за поверителност · Условия за ползване</span>
+  </div>
+</footer>
+
+<a href="viber://chat?number=%2B35988956799" class="whatsapp-btn" target="_blank">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M11.997 0C5.977 0 1.04 4.84 1.04 10.777c0 2.237.69 4.342 1.88 6.09L1.04 22.24l5.57-1.845a10.93 10.93 0 005.387 1.382c6.02 0 10.963-4.84 10.963-10.777C22.96 4.84 18.017 0 11.997 0zm4.92 13.26c-.27-.135-1.598-.788-1.845-.878-.248-.09-.428-.135-.608.135-.18.27-.698.878-.856 1.058-.158.18-.315.203-.585.068-.27-.136-1.14-.42-2.172-1.341-.803-.716-1.344-1.6-1.502-1.87-.158-.27-.017-.416.118-.55.121-.12.27-.315.405-.473.135-.157.18-.27.27-.45.09-.18.045-.338-.023-.473-.067-.135-.607-1.463-.832-2.003-.22-.527-.443-.455-.608-.464l-.518-.009c-.18 0-.473.068-.72.338s-.945.923-.945 2.251.967 2.611 1.102 2.791c.135.18 1.903 2.906 4.612 4.075.645.278 1.148.444 1.54.569.647.206 1.236.177 1.702.107.519-.077 1.598-.653 1.823-1.284.225-.63.225-1.17.158-1.284-.068-.112-.248-.18-.518-.315z"/></svg>
+  <span data-key="wa_text">Пишете ни</span>
+</a>
+
+<script src="/static/js/lang.js"></script>
+<script>initLang();</script>
+</body>
+</html>

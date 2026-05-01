@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакти — Wood&Craft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Wood<span>&</span>Craft</a>
+  <ul class="nav-links">
+    <li><a href="/gallery" data-key="nav_gallery">Галерия</a></li>
+    <li><a href="/#services" data-key="nav_services">Услуги</a></li>
+    <li><a href="/#about" data-key="nav_about">За нас</a></li>
+    <li><a href="/process" data-key="nav_process">Процес</a></li>
+    <li><a href="/contact" class="active" data-key="nav_contact">Контакти</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-bg" onclick="setLang('bg')">БГ</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+    <button class="nav-cta" onclick="window.location.href='/contact'" data-key="nav_cta">Безплатна консултация</button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div>
+    <div class="section-eyebrow" data-key="contact_eyebrow">Свържете се с нас</div>
+    <h1 data-key="contact_h2">Нека създадем<br>вашата <em>кухня</em></h1>
+  </div>
+  <div class="header-sub" data-key="contact_sub">Попълнете формата или се свържете директно с нас. Отговаряме до 2 часа.</div>
+</div>
+
+<section class="contact-section">
+  <div class="contact-grid">
+
+    <div class="contact-left">
+      <div class="contact-methods">
+        <a href="viber://chat?number=%2B35988956799" class="contact-method">
+          <div class="contact-method-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.997 0C5.977 0 1.04 4.84 1.04 10.777c0 2.237.69 4.342 1.88 6.09L1.04 22.24l5.57-1.845a10.93 10.93 0 005.387 1.382c6.02 0 10.963-4.84 10.963-10.777C22.96 4.84 18.017 0 11.997 0zm4.92 13.26c-.27-.135-1.598-.788-1.845-.878-.248-.09-.428-.135-.608.135-.18.27-.698.878-.856 1.058-.158.18-.315.203-.585.068-.27-.136-1.14-.42-2.172-1.341-.803-.716-1.344-1.6-1.502-1.87-.158-.27-.017-.416.118-.55.121-.12.27-.315.405-.473.135-.157.18-.27.27-.45.09-.18.045-.338-.023-.473-.067-.135-.607-1.463-.832-2.003-.22-.527-.443-.455-.608-.464l-.518-.009c-.18 0-.473.068-.72.338s-.945.923-.945 2.251.967 2.611 1.102 2.791c.135.18 1.903 2.906 4.612 4.075.645.278 1.148.444 1.54.569.647.206 1.236.177 1.702.107.519-.077 1.598-.653 1.823-1.284.225-.63.225-1.17.158-1.284-.068-.112-.248-.18-.518-.315z"/></svg>
+          </div>
+          <div>
+            <div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--oak);font-weight:500;margin-bottom:2px;">Viber</div>
+            <div data-key="contact_viber">Пишете във Viber</div>
+          </div>
+        </a>
+        <a href="tel:+35988956799" class="contact-method">
+          <div class="contact-method-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C9.61 21 3 14.39 3 6c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div>
+            <div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--oak);font-weight:500;margin-bottom:2px;">Телефон</div>
+            <div data-key="contact_phone">+359 88 9567999</div>
+          </div>
+        </a>
+        <a href="mailto:hello@woodcraft.bg" class="contact-method">
+          <div class="contact-method-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div>
+            <div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--oak);font-weight:500;margin-bottom:2px;">Имейл</div>
+            <div data-key="contact_email">hello@woodcraft.bg</div>
+          </div>
+        </a>
+      </div>
+
+      <div style="margin-top:48px;border-radius:12px;overflow:hidden;height:220px;background:var(--cream);">
+        <img src="/static/images/smolyan-1.jpg" alt="Our work" style="width:100%;height:100%;object-fit:cover;opacity:0.85;">
+      </div>
+    </div>
+
+    <div class="contact-form-wrap">
+      <div id="status-banner" class="status-banner"></div>
+      <form action="/contact" method="POST" class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name" data-key="form_name">Три имена</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="phone" data-key="form_phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email" data-key="form_email">Имейл адрес</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="city" data-key="form_city">Град</label>
+            <input type="text" id="city" name="city" autocomplete="address-level2">
+          </div>
+          <div class="form-group">
+            <label for="size" data-key="form_size">Приблизителна площ (кв.м)</label>
+            <input type="text" id="size" name="size" placeholder="напр. 12 кв.м">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message" data-key="form_message">Разкажете ни за проекта</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn-primary" data-key="form_submit">Изпратете запитване →</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<a href="viber://chat?number=%2B35988956799" class="whatsapp-btn" target="_blank">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M11.997 0C5.977 0 1.04 4.84 1.04 10.777c0 2.237.69 4.342 1.88 6.09L1.04 22.24l5.57-1.845a10.93 10.93 0 005.387 1.382c6.02 0 10.963-4.84 10.963-10.777C22.96 4.84 18.017 0 11.997 0zm4.92 13.26c-.27-.135-1.598-.788-1.845-.878-.248-.09-.428-.135-.608.135-.18.27-.698.878-.856 1.058-.158.18-.315.203-.585.068-.27-.136-1.14-.42-2.172-1.341-.803-.716-1.344-1.6-1.502-1.87-.158-.27-.017-.416.118-.55.121-.12.27-.315.405-.473.135-.157.18-.27.27-.45.09-.18.045-.338-.023-.473-.067-.135-.607-1.463-.832-2.003-.22-.527-.443-.455-.608-.464l-.518-.009c-.18 0-.473.068-.72.338s-.945.923-.945 2.251.967 2.611 1.102 2.791c.135.18 1.903 2.906 4.612 4.075.645.278 1.148.444 1.54.569.647.206 1.236.177 1.702.107.519-.077 1.598-.653 1.823-1.284.225-.63.225-1.17.158-1.284-.068-.112-.248-.18-.518-.315z"/></svg>
+  <span data-key="wa_text">Пишете ни</span>
+</a>
+
+<script src="/static/js/lang.js"></script>
+<script>
+initLang();
+
+// Show success/error banner based on URL query param
+const params = new URLSearchParams(window.location.search);
+const status = params.get('status');
+if (status) {
+  const banner = document.getElementById('status-banner');
+  const t = translations[currentLang];
+  if (status === 'success') {
+    banner.textContent = t.form_success;
+    banner.classList.add('success');
+  } else if (status === 'error') {
+    banner.textContent = t.form_error;
+    banner.classList.add('error');
+  }
+  // Remove ?status from URL so refreshing doesn't re-show it
+  history.replaceState(null, '', '/contact');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Галерия — Wood&Craft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Wood<span>&</span>Craft</a>
+  <ul class="nav-links">
+    <li><a href="/gallery" class="active" data-key="nav_gallery">Галерия</a></li>
+    <li><a href="/#services" data-key="nav_services">Услуги</a></li>
+    <li><a href="/#about" data-key="nav_about">За нас</a></li>
+    <li><a href="/process" data-key="nav_process">Процес</a></li>
+    <li><a href="/contact" data-key="nav_contact">Контакти</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-bg" onclick="setLang('bg')">БГ</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+    <button class="nav-cta" onclick="window.location.href='/contact'" data-key="nav_cta">Безплатна консултация</button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div>
+    <div class="section-eyebrow" data-key="page_eyebrow">Нашата работа</div>
+    <h1 data-key="page_h1">Всяка кухня,<br>един <em>шедьовър</em></h1>
+  </div>
+  <div class="header-sub" data-key="page_sub">Разгледайте нашето портфолио от ръчно изработени кухни. Всяка — построена да издържи и проектирана около семейството.</div>
+</div>
+
+<div class="filter-bar">
+  <span class="filter-label">Filter:</span>
+  <button class="filter-btn active" data-filter="all" data-key="filter_all">Всички проекти</button>
+  <button class="filter-btn" data-filter="modern" data-key="filter_modern">Модерен</button>
+  <button class="filter-btn" data-filter="classic" data-key="filter_classic">Класически</button>
+  <button class="filter-btn" data-filter="rustic" data-key="filter_rustic">Дърво и камък</button>
+  <button class="filter-btn" data-filter="minimalist" data-key="filter_minimal">Минималистичен</button>
+  <button class="filter-btn" data-filter="industrial" data-key="filter_industrial">Двуцветен</button>
+  <span class="proj-count" id="proj-count">12 проекта</span>
+</div>
+
+<div class="proj-grid" id="proj-grid">
+
+  <!-- 1. Plovdiv 1 — Modern oak + marble + pendants — BEST -->
+  <div class="card" data-cat="modern"
+    data-title-bg="Пловдив — Топъл Класик" data-title-en="Plovdiv — Warm Classic"
+    data-style-bg="Модерен" data-style-en="Modern"
+    data-material-bg="Дъб + Мрамор" data-material-en="Oak + Marble"
+    data-location="Пловдив" data-style-tag="Модерен"
+    data-desc-bg="Топла и елегантна кухня в Пловдив с дъбови горни шкафове, бежови долни корпуси и мраморен гръб. Три висящи лампи над острова завършват уютната атмосфера."
+    data-desc-en="A warm and elegant kitchen in Plovdiv with oak upper cabinets, beige lower units and a marble splashback. Three pendant lights above the worktop complete the inviting atmosphere.">
+    <div class="card-img">
+      <img src="/static/images/plovdiv-1.jpg" alt="Пловдив кухня" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-style" data-key="filter_modern">Модерен</div>
+      <div class="card-title" data-proj-title>Пловдив — Топъл Класик</div>
+      <div class="card-detail">Пловдив</div>
+      <div class="card-tag">Модерен</div>
+    </div>
+  </div>
+
+  <!-- 2. Smolyan 1 — Contemporary white + oak L-shape -->
+  <div class="card" data-cat="minimalist"
+    data-title-bg="Смолян — Бяло и Дъб" data-title-en="Smolyan — White & Oak"
+    data-style-bg="Минималистичен" data-style-en="Minimalist"
+    data-material-bg="Бял гланц + Дъбови горни шкафове" data-material-en="White Gloss + Oak Upper Cabinets"
+    data-location="Смолян" data-style-tag="Минималистичен"
+    data-desc-bg="Просторна Г-образна кухня в Смолян с бели гланцови долни корпуси и дъбови горни шкафове. Сивата зад стена и кварцовите плотове допълват изчистения съвременен вид."
+    data-desc-en="A spacious L-shaped kitchen in Smolyan with white gloss lower units and oak upper cabinets. The concrete-effect splashback and quartz worktops complete the clean contemporary look.">
+    <div class="card-img">
+      <img src="/static/images/smolyan-1.jpg" alt="Смолян кухня" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-style" data-key="filter_minimal">Минималистичен</div>
+      <div class="card-title" data-proj-title>Смолян — Бяло и Дъб</div>
+      <div class="card-detail">Смолян</div>
+      <div class="card-tag">Минималистичен</div>
+    </div>
+  </div>
+
+  <!-- 3. Reduta — Classic white under stairs -->
+  <div class="card" data-cat="classic"
+    data-title-bg="Редута, София — Класически Бял" data-title-en="Reduta, Sofia — Classic White"
+    data-style-bg="Класически" data-style-en="Classic"
+    data-material-bg="Бяла боядисана МДФ + Кварц" data-material-en="White Painted MDF + Quartz"
+    data-location="Редута, София" data-style-tag="Класически"
+    data-desc-bg="Компактна класическа кухня в квартал Редута, София. Бели МДФ врати с профил, стъклени горни шкафове, LED осветление под шкафовете и кварцов плот. Монтирана под стълбище."
+    data-desc-en="A compact classic kitchen in Reduta, Sofia. White MDF profile doors, glass upper cabinets, under-cabinet LED lighting and a quartz worktop. Installed under a staircase.">
+    <div class="card-img">
+      <img src="/static/images/reduta-2.jpg" alt="Редута кухня" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-style" data-key="filter_classic">Класически</div>
+      <div class="card-title" data-proj-title>Редута, София — Класически Бял</div>
+      <div class="card-detail">Редута, София</div>
+      <div class="card-tag">Класически</div>
+    </div>
+  </div>
+
+  <!-- 4. Ofrinion — White + wood slat partition wall -->
+  <div class="card" data-cat="minimalist"
+    data-title-bg="Офринио, Гърция — Бяло и Дърво" data-title-en="Ofrinion, Greece — White & Wood"
+    data-style-bg="Минималистичен" data-style-en="Minimalist"
+    data-material-bg="Бял лак + Масивно дърво (слатова стена)" data-material-en="White Lacquer + Solid Wood Slat Wall"
+    data-location="Офринио, Гърция" data-style-tag="Минималистичен"
+    data-desc-bg="Елегантна кухня в Офринио, Гърция с бели безрамкови шкафове и декоративна слатова стена от масивно дърво. Вградена пералня, push-to-open механизми и нежни дъбови плотове."
+    data-desc-en="An elegant kitchen in Ofrinion, Greece featuring handleless white cabinets and a decorative solid wood slat wall. Integrated washing machine, push-to-open mechanisms and warm oak worktops.">
+    <div class="card-img">
+      <img src="/static/images/ofrinion-1.jpg" alt="Офринио кухня" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-style" data-key="filter_minimal">Минималистичен</div>
+      <div class="card-title" data-proj-title>Офринио, Гърция — Бяло и Дърво</div>
+      <div class="card-detail">Офринио, Гърция</div>
+      <div class="card-tag">Минималистичен</div>
+    </div>
+  </div>
+
+  <!-- 5. Keramoti — Natural oak + dark slate -->
+  <div class="card" data-cat="rustic"
+    data-title-bg="Керамоти, Гърция — Дъб и Шисти" data-title-en="Keramoti, Greece — Oak & Slate"
+    data-style-bg="Дърво и камък" data-style-en="Wood & Stone"
+    data-material-bg="Естествен дъб + Тъмен шистен плот" data-material-en="Natural Oak + Dark Slate Worktop"
+    data-location="Керамоти, Гърция" data-style-tag="Дърво и камък"
+    data-desc-bg="Топла кухня в Керамоти с естествен дъбов фурнир и масивен тъмен шистен плот. Инокс мивка и скрит аспиратор подчертават натуралния характер на пространството."
+    data-desc-en="A warm kitchen in Keramoti featuring natural oak veneer and a solid dark slate worktop. A stainless steel sink and concealed extractor emphasise the natural character of the space.">
+    <div class="card-img">
+      <img src="/static/images/keramoti-1.jpg" alt="Керамоти кухня" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-style" data-key="filter_rustic">Дърво и камък</div>
+      <div class="card-title" data-proj-title>Керамоти, Гърция — Дъб и Шисти</div>
+      <div class="card-detail">Керамоти, Гърция</div>
+      <div class="card-tag">Дърво и камък</div>
+    </div>
+  </div>
+
+  <!-- 6. Greece small — Compact oak + slate -->
+  <div class="card" data-cat="rustic"
+    data-title-bg="Гърция — Малка Кухня" data-title-en="Greece — Compact Kitchen"
+    data-style-bg="Дърво и камък" data-style-en="Wood & Stone"
+    data-material-bg="Дъб + Шистен плот" data-material-en="Oak + Slate Worktop"
+    data-location="Гърция" data-style-tag="Дърво и камък"
+    data-desc-bg="Компактна и функционална кухня с дъбови шкафове и тъмен шистен плот. Максимален ред в малко пространство — доказателство, че малките кухни могат да бъдат изключителни."
+    data-desc-en="A compact and functional kitchen with oak cabinets and a dark slate worktop. Maximum organisation in a small space — proof that compact kitchens can be exceptional.">
+    <div class="card-img">
+      <img src="/static/images/greece-small-1.jpg" alt="Малка кухня Гърция" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-style" data-key="filter_rustic">Дърво и камък</div>
+      <div class="card-title" data-proj-title>Гърция — Малка Кухня</div>
+      <div class="card-detail">Гърция</div>
+      <div class="card-tag">Дърво и камък</div>
+    </div>
+  </div>
+
+  <!-- 7. Smolyan 2 — White gloss L-shape + wood worktop -->
+  <div class="card" data-cat="minimalist"
+    data-title-bg="Смолян 2 — Чисто Бяло" data-title-en="Smolyan 2 — Pure White"
+    data-style-bg="Минималистичен" data-style-en="Minimalist"
+    data-material-bg="Бял гланц + Дъбов плот + LED лента" data-material-en="White Gloss + Oak Worktop + LED Strip"
+    data-location="Смолян" data-style-tag="Минималистичен"
+    data-desc-bg="Г-образна кухня в Смолян с бели гланцови шкафове без дръжки и масивен дъбов плот. LED лента под горните шкафове и вградена пералня в долния ред."
+    data-desc-en="An L-shaped kitchen in Smolyan with white handleless gloss cabinets and a solid oak worktop. LED strip lighting under the upper units and an integrated washing machine in the lower run.">
+    <div class="card-img">
+      <img src="/static/images/smolyan-2.jpg" alt="Смолян 2 кухня" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-style" data-key="filter_minimal">Минималистичен</div>
+      <div class="card-title" data-proj-title>Смолян 2 — Чисто Бяло</div>
+      <div class="card-detail">Смолян</div>
+      <div class="card-tag">Минималистичен</div>
+    </div>
+  </div>
+
+  <!-- 8. Pet Mogili — Cream gloss -->
+  <div class="card" data-cat="classic"
+    data-title-bg="Пет Могили — Крем и Топло" data-title-en="Pet Mogili — Cream & Warm"
+    data-style-bg="Класически" data-style-en="Classic"
+    data-material-bg="Кремав гланц + Подсветено ниво" data-material-en="Cream Gloss + Lit Display Shelf"
+    data-location="Пет Могили" data-style-tag="Класически"
+    data-desc-bg="Уютна кухня в Пет Могили с кремави гланцови шкафове, декоративно осветено ниво и вградено оборудване. Мека топлота и функционалност в едно."
+    data-desc-en="A cosy kitchen in Pet Mogili featuring cream gloss cabinets, an illuminated display shelf and integrated appliances. Soft warmth and practicality combined.">
+    <div class="card-img">
+      <img src="/static/images/pet-mogili-1.jpg" alt="Пет Могили кухня" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-style" data-key="filter_classic">Класически</div>
+      <div class="card-title" data-proj-title>Пет Могили — Крем и Топло</div>
+      <div class="card-detail">Пет Могили</div>
+      <div class="card-tag">Класически</div>
+    </div>
+  </div>
+
+  <!-- 9. Plovdiv 2 — White gloss + wood island -->
+  <div class="card" data-cat="modern"
+    data-title-bg="Пловдив 2 — Бял Остров" data-title-en="Plovdiv 2 — White Island"
+    data-style-bg="Модерен" data-style-en="Modern"
+    data-material-bg="Бял гланц + Остров с дървен плот" data-material-en="White Gloss + Wood-trim Island"
+    data-location="Пловдив" data-style-tag="Модерен"
+    data-desc-bg="Открита кухня в Пловдив с бели гланцови шкафове и централен остров с дървена декоративна лента. Просторна компоновка, подходяща за семейства."
+    data-desc-en="An open-plan kitchen in Plovdiv with white gloss cabinets and a central island with a decorative wood-trim band. A spacious layout ideal for families.">
+    <div class="card-img">
+      <img src="/static/images/plovdiv-2.jpg" alt="Пловдив 2 кухня" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-style" data-key="filter_modern">Модерен</div>
+      <div class="card-title" data-proj-title>Пловдив 2 — Бял Остров</div>
+      <div class="card-detail">Пловдив</div>
+      <div class="card-tag">Модерен</div>
+    </div>
+  </div>
+
+  <!-- 10. Pazardzhik — Dark wenge + white two-tone -->
+  <div class="card" data-cat="industrial"
+    data-title-bg="Пазарджик — Тъмно и Бяло" data-title-en="Pazardzhik — Dark & White"
+    data-style-bg="Двуцветен" data-style-en="Two-tone"
+    data-material-bg="Венге долни + Бели горни шкафове" data-material-en="Wenge Lower + White Upper Cabinets"
+    data-location="Пазарджик" data-style-tag="Двуцветен"
+    data-desc-bg="Двуцветна кухня в Пазарджик с тъмни венге долни шкафове и бели горни с матирани стъклени витрини. Контрастното решение придава характер на всяко пространство."
+    data-desc-en="A two-tone kitchen in Pazardzhik with dark wenge lower cabinets and white upper units with frosted glass display doors. The contrasting scheme brings character to the space.">
+    <div class="card-img">
+      <img src="/static/images/pazardzhik-1.jpg" alt="Пазарджик кухня" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-style" data-key="filter_industrial">Двуцветен</div>
+      <div class="card-title" data-proj-title>Пазарджик — Тъмно и Бяло</div>
+      <div class="card-detail">Пазарджик</div>
+      <div class="card-tag">Двуцветен</div>
+    </div>
+  </div>
+
+  <!-- 11. Studentski — White + black splashback -->
+  <div class="card" data-cat="modern"
+    data-title-bg="Студентски, София — Черен Гранит" data-title-en="Studentski, Sofia — Black Granite"
+    data-style-bg="Модерен" data-style-en="Modern"
+    data-material-bg="Бял гланц + Черен гранитен гръб и плот" data-material-en="White Gloss + Black Granite Splashback & Worktop"
+    data-location="Студентски, София" data-style-tag="Модерен"
+    data-desc-bg="Модерна кухня в квартал Студентски с бели безрамкови шкафове и черен гранитен плот и гръб. Смелият контраст между бялото и черното прави тази кухня незабравима."
+    data-desc-en="A modern kitchen in Studentski, Sofia featuring handleless white cabinets and a bold black granite worktop and splashback. The striking contrast makes this kitchen unforgettable.">
+    <div class="card-img">
+      <img src="/static/images/studentski-1.jpg" alt="Студентски кухня" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-style" data-key="filter_modern">Модерен</div>
+      <div class="card-title" data-proj-title>Студентски, София — Черен Гранит</div>
+      <div class="card-detail">Студентски, София</div>
+      <div class="card-tag">Модерен</div>
+    </div>
+  </div>
+
+  <!-- 12. Gerena — Light beige + grey -->
+  <div class="card" data-cat="classic"
+    data-title-bg="Герена — Топъл Бежов" data-title-en="Gerena — Warm Beige"
+    data-style-bg="Класически" data-style-en="Classic"
+    data-material-bg="Бежов меламин + Сив травертин" data-material-en="Beige Melamine + Grey Travertine"
+    data-location="Герена" data-style-tag="Класически"
+    data-desc-bg="Топла бежова кухня в Герена с меламинови шкафове и сив травертинов гръб. Практична и семейна — проектирана да служи дълго."
+    data-desc-en="A warm beige kitchen in Gerena with melamine cabinets and a grey travertine splashback. Practical and family-friendly — designed to serve for years.">
+    <div class="card-img">
+      <img src="/static/images/gerena-1.jpg" alt="Герена кухня" loading="lazy">
+    </div>
+    <div class="card-body">
+      <div class="card-style" data-key="filter_classic">Класически</div>
+      <div class="card-title" data-proj-title>Герена — Топъл Бежов</div>
+      <div class="card-detail">Герена</div>
+      <div class="card-tag">Класически</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lb-close">&#x2715;</button>
+  <div class="lb-inner">
+    <div class="lb-img" id="lb-img"></div>
+    <div class="lb-info">
+      <div>
+        <div class="lb-eyebrow" id="lb-style"></div>
+        <div class="lb-title" id="lb-title"></div>
+        <div class="lb-desc" id="lb-desc"></div>
+        <div class="lb-specs" id="lb-specs"></div>
+      </div>
+      <button class="lb-cta" id="lb-cta" onclick="window.location.href='/contact'">Запитайте за подобен проект →</button>
+    </div>
+  </div>
+</div>
+
+<a href="viber://chat?number=%2B35988956799" class="whatsapp-btn" target="_blank">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M11.997 0C5.977 0 1.04 4.84 1.04 10.777c0 2.237.69 4.342 1.88 6.09L1.04 22.24l5.57-1.845a10.93 10.93 0 005.387 1.382c6.02 0 10.963-4.84 10.963-10.777C22.96 4.84 18.017 0 11.997 0zm4.92 13.26c-.27-.135-1.598-.788-1.845-.878-.248-.09-.428-.135-.608.135-.18.27-.698.878-.856 1.058-.158.18-.315.203-.585.068-.27-.136-1.14-.42-2.172-1.341-.803-.716-1.344-1.6-1.502-1.87-.158-.27-.017-.416.118-.55.121-.12.27-.315.405-.473.135-.157.18-.27.27-.45.09-.18.045-.338-.023-.473-.067-.135-.607-1.463-.832-2.003-.22-.527-.443-.455-.608-.464l-.518-.009c-.18 0-.473.068-.72.338s-.945.923-.945 2.251.967 2.611 1.102 2.791c.135.18 1.903 2.906 4.612 4.075.645.278 1.148.444 1.54.569.647.206 1.236.177 1.702.107.519-.077 1.598-.653 1.823-1.284.225-.63.225-1.17.158-1.284-.068-.112-.248-.18-.518-.315z"/></svg>
+  <span data-key="wa_text">Пишете ни</span>
+</a>
+
+<script src="/static/js/lang.js"></script>
+<script>
+initLang();
+
+const cards = document.querySelectorAll('.card');
+const filterBtns = document.querySelectorAll('.filter-btn');
+const countEl = document.getElementById('proj-count');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    let visible = 0;
+    cards.forEach(c => {
+      const show = f === 'all' || c.dataset.cat === f;
+      c.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+    countEl.textContent = visible + ' ' + translations[currentLang].projects_label;
+  });
+});
+
+const lightbox = document.getElementById('lightbox');
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    const lang = currentLang;
+    const isBg = lang === 'bg';
+    document.getElementById('lb-style').textContent = card.dataset[isBg ? 'styleBg' : 'styleEn'] || card.dataset.styleTag || '';
+    document.getElementById('lb-title').textContent = card.dataset[isBg ? 'titleBg' : 'titleEn'] || '';
+    document.getElementById('lb-desc').textContent  = card.dataset[isBg ? 'descBg'  : 'descEn']  || '';
+    document.getElementById('lb-cta').textContent   = translations[lang].lb_cta;
+    document.getElementById('lb-specs').innerHTML =
+      `<div class="lb-spec"><span>${translations[lang].lb_material}</span><span>${card.dataset[isBg ? 'materialBg' : 'materialEn'] || ''}</span></div>
+       <div class="lb-spec"><span>${translations[lang].lb_size}</span><span>${card.dataset.location || ''}</span></div>
+       <div class="lb-spec"><span>${translations[lang].lb_timeline}</span><span>${card.dataset[isBg ? 'styleBg' : 'styleEn'] || ''}</span></div>`;
+    const imgSrc = card.querySelector('.card-img img').src;
+    document.getElementById('lb-img').innerHTML = `<img src="${imgSrc}" alt="" style="width:100%;height:100%;object-fit:cover;">`;
+    lightbox.classList.add('open');
+  });
+});
+
+document.getElementById('lb-close').addEventListener('click', () => lightbox.classList.remove('open'));
+lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('open'); });
+</script>
+</body>
+</html>
