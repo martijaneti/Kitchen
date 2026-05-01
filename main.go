@@ -20,18 +20,11 @@ func main() {
 	app.Use(logger.New())
 	app.Use(recover.New())
 
-	// Kitchen photos served under /static/images/
 	app.Static("/static/images", "./static/images")
-
-	// Vite build assets
-	app.Static("/assets", "./static/dist/assets")
-
-	// Contact form API
-	app.Post("/contact", handlers.ContactSubmit)
-
-	// SPA catch-all — serves index.html for every other route
+	app.Static("/", "./public")
+	app.Post("/api/contact", handlers.ContactSubmit)
 	app.Get("*", func(c *fiber.Ctx) error {
-		return c.SendFile("./static/dist/index.html")
+		return c.SendFile("./public/index.html")
 	})
 
 	port := os.Getenv("PORT")

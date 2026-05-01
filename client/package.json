@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node -e \"require('fs').cpSync('../static/images','../static/dist/static/images',{recursive:true})\"",
+    "build": "vite build && node -e \"require('fs').cpSync('../static/images','../public/static/images',{recursive:true})\"",
     "preview": "vite preview"
   },
   "dependencies": {

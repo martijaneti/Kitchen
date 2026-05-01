@@ -29,7 +29,7 @@ export default function Contact() {
     e.preventDefault()
     setLoading(true)
     try {
-      const res = await fetch('/contact', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),

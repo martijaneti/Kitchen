@@ -5,14 +5,14 @@ export default defineConfig({
   plugins: [react()],
   base: '/',
   build: {
-    outDir: '../static/dist',
+    outDir: '../public',
     emptyOutDir: true,
   },
   server: {
     port: 5173,
     proxy: {
       '/static/images': 'http://localhost:3000',
-      '/contact': { target: 'http://localhost:3000', changeOrigin: true },
+      '/api/contact': { target: 'http://localhost:3000', changeOrigin: true },
     },
   },
 })
