@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/index.go": {
+      "includeFiles": "static/**"
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index" }
+  ]
+}
