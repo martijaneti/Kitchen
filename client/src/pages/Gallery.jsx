@@ -36,7 +36,6 @@ export default function Gallery() {
   }, [selected, prev, next])
 
   const title = selected ? (lang === 'bg' ? selected.titleBg : selected.titleEn) : ''
-  const style = selected ? (lang === 'bg' ? selected.styleBg : selected.styleEn) : ''
   const material = selected ? (lang === 'bg' ? selected.materialBg : selected.materialEn) : ''
   const desc = selected ? (lang === 'bg' ? selected.descBg : selected.descEn) : ''
 
@@ -65,7 +64,6 @@ export default function Gallery() {
               )}
             </div>
             <div className="card-body">
-              <div className="card-style">{lang === 'bg' ? kitchen.styleBg : kitchen.styleEn}</div>
               <div className="card-title">{lang === 'bg' ? kitchen.titleBg : kitchen.titleEn}</div>
               <div className="card-detail">{lang === 'bg' ? kitchen.materialBg : kitchen.materialEn}</div>
               <span className="card-tag">{kitchen.location}</span>
@@ -90,7 +88,6 @@ export default function Gallery() {
             </div>
             <div className="lb-info">
               <div>
-                <div className="lb-eyebrow">{style}</div>
                 <div className="lb-title">{title}</div>
                 <p className="lb-desc">{desc}</p>
               </div>
@@ -98,7 +95,6 @@ export default function Gallery() {
                 <div className="lb-specs">
                   <div className="lb-spec"><span>{t.lb_material}</span><span>{material}</span></div>
                   <div className="lb-spec"><span>{t.lb_size}</span><span>{selected.location}</span></div>
-                  <div className="lb-spec"><span>{t.lb_timeline}</span><span>{style}</span></div>
                 </div>
                 <a href="/contact" className="lb-cta">{t.lb_cta}</a>
               </div>
