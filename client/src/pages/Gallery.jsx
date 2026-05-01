@@ -2,20 +2,10 @@ import { useState, useEffect, useCallback } from 'react'
 import { useLang } from '../context/LangContext'
 import { kitchens } from '../data/gallery'
 
-const FILTERS = ['all', 'modern', 'classic', 'rustic', 'minimalist', 'industrial']
-
 export default function Gallery() {
   const { t, lang } = useLang()
-  const [active, setActive] = useState('all')
   const [selected, setSelected] = useState(null)
   const [photoIdx, setPhotoIdx] = useState(0)
-
-  const visible = active === 'all' ? kitchens : kitchens.filter(k => k.cat === active)
-
-  const filterLabel = {
-    all: t.filter_all, modern: t.filter_modern, classic: t.filter_classic,
-    rustic: t.filter_rustic, minimalist: t.filter_minimal, industrial: t.filter_industrial,
-  }
 
   const open = (kitchen) => {
     setSelected(kitchen)
@@ -60,22 +50,8 @@ export default function Gallery() {
         <p className="header-sub">{t.page_sub}</p>
       </div>
 
-      <div className="filter-bar">
-        <span className="filter-label">Filter:</span>
-        {FILTERS.map(f => (
-          <button
-            key={f}
-            className={`filter-btn${active === f ? ' active' : ''}`}
-            onClick={() => setActive(f)}
-          >
-            {filterLabel[f]}
-          </button>
-        ))}
-        <span className="proj-count">{visible.length} {t.projects_label}</span>
-      </div>
-
       <div className="proj-grid">
-        {visible.map(kitchen => (
+        {kitchens.map(kitchen => (
           <div key={kitchen.id} className="card" onClick={() => open(kitchen)}>
             <div className="card-img">
               <img src={kitchen.photos[0]} alt={lang === 'bg' ? kitchen.titleBg : kitchen.titleEn} loading="lazy" />
