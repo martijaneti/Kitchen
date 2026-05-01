@@ -1,10 +1,15 @@
 {
-  "functions": {
-    "api/index.go": {
-      "includeFiles": "static/**"
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.go",
+      "use": "@vercel/go",
+      "config": {
+        "includeFiles": ["static/**"]
+      }
     }
-  },
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/api/index" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/api/index" }
   ]
 }
