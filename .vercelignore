@@ -1,9 +1,0 @@
-go.mod
-go.sum
-cmd/
-handlers/
-views/
-static/css/
-static/js/
-static/dist/
-client/node_modules/

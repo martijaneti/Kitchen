@@ -1,8 +1,0 @@
-{
-  "installCommand": "npm install && cd client && npm install",
-  "buildCommand": "cd client && npm run build",
-  "outputDirectory": "public",
-  "rewrites": [
-    { "source": "/((?!api/).*)", "destination": "/index.html" }
-  ]
-}
